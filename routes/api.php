@@ -3,7 +3,5 @@
 use App\Http\Controllers\IssueController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', fn() => redirect()->route('issues.index'));
-
 Route::resource('issues', IssueController::class)
-    ->only(['index', 'create', 'store', 'show', 'edit', 'update']);
+    ->only(['index', 'store', 'show', 'update']);
